@@ -1,17 +1,17 @@
 package by.company.molochko.triangle_point.entity;
 
 public class Point {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
 
     public Point() {}
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
@@ -19,7 +19,7 @@ public class Point {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
@@ -48,8 +48,8 @@ public class Point {
     public int hashCode() {
         int result = 1;
         int prime = 31;
-        result = prime * result + getX();
-        result = prime * result + getY();
+        result = prime * result + Double.hashCode(getX());
+        result = prime * result + Double.hashCode(getY());
         return result;
     }
 
