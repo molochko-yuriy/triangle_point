@@ -1,24 +1,14 @@
 package by.company.molochko.triangle_point.entity;
 
 public class Point {
-    private String name = "point name";
     private int x;
     private int y;
 
     public Point() {}
 
-    public Point(String name, int x, int y) {
-        this.name = name;
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getX() {
@@ -48,10 +38,6 @@ public class Point {
 
         Point aThat = (Point) object;
 
-        if (getName() == null) {
-            if (aThat.getName()  != null) { return false;}
-        } else if (!getName().equals(aThat.getName())) { return false;}
-
         if (getX() == aThat.getX()){
             return true;
         }
@@ -62,7 +48,6 @@ public class Point {
     public int hashCode() {
         int result = 1;
         int prime = 31;
-        result = prime * result + (getName() != null ? getName().hashCode() : 0);
         result = prime * result + getX();
         result = prime * result + getY();
         return result;
@@ -71,7 +56,6 @@ public class Point {
     @Override
     public String toString() {
         return "Point{" +
-                "name='" + getName() + '\'' +
                 ", x=" + getX() +
                 ", y=" + getY() +
                 '}';

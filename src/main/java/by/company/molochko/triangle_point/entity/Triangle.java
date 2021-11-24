@@ -1,50 +1,49 @@
 package by.company.molochko.triangle_point.entity;
 
 public class Triangle {
-    private String name = "triangle name";
-    private Point a;
-    private Point b;
-    private Point c;
+    private Long id;
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
 
     public Triangle() {}
 
-    public Triangle(String name, Point a, Point b, Point c) {
-        this.name = name;
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(Point a, Point b, Point c) {
+        this.pointA = a;
+        this.pointB = b;
+        this.pointC = c;
     }
 
-    public String getName() {
-        return name;
+    public Long getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String name) {
+        this.id = id;
     }
 
-    public Point getA() {
-        return a;
+    public Point getPointA() {
+        return pointA;
     }
 
-    public void setA(Point a) {
-        this.a = a;
+    public void setPointA(Point pointA) {
+        this.pointA = pointA;
     }
 
-    public Point getB() {
-        return b;
+    public Point getPointB() {
+        return pointB;
     }
 
-    public void setB(Point b) {
-        this.b = b;
+    public void setPointB(Point pointB) {
+        this.pointB = pointB;
     }
 
-    public Point getC() {
-        return c;
+    public Point getPointC() {
+        return pointC;
     }
 
-    public void setC(Point c) {
-        this.c = c;
+    public void setPointC(Point pointC) {
+        this.pointC = pointC;
     }
 
     @Override
@@ -58,44 +57,43 @@ public class Triangle {
 
         Triangle aThat = (Triangle) object;
 
-        if (getName() == null) {
-            if (aThat.getName()  != null) { return false;}
-        } else if (!getName().equals(aThat.getName())) { return false;}
+        if (getId() == null) {
+            if (aThat.getId()  != null) { return false;}
+        } else if (!getId().equals(aThat.getId())) { return false;}
 
-        if (getA() == null) {
-            if (aThat.getA()  != null) { return false;}
-        } else if (!getA().equals(aThat.getA())) { return false;}
+        if (getPointA() == null) {
+            if (aThat.getPointA()  != null) { return false;}
+        } else if (!getPointA().equals(aThat.getPointA())) { return false;}
 
-        if (getB() == null) {
-            if (aThat.getB()  != null) { return false;}
-        } else if (!getB().equals(aThat.getB())) { return false;}
+        if (getPointB() == null) {
+            if (aThat.getPointB()  != null) { return false;}
+        } else if (!getPointB().equals(aThat.getPointB())) { return false;}
 
-        if (getC() == null) {
-            if (aThat.getC()  != null) { return false;}
-        } else if (!getC().equals(aThat.getC())) { return false;}
+        if (getPointC() == null) {
+            if (aThat.getPointC()  != null) { return false;}
+        } else if (!getPointC().equals(aThat.getPointC())) { return false;}
 
-        return getC().equals(aThat.getC());
+        return getPointC().equals(aThat.getPointC());
     }
 
     @Override
     public int hashCode() {
         int result = 1;
         int prime = 31;
-        result = prime * result + (getName() != null ? getName().hashCode() : 0);
-        result = prime * result + (getA() != null ? getA().hashCode() : 0);
-        result = prime * result + (getB() != null ? getB().hashCode() : 0);
-        result = prime * result + (getC() != null ? getC().hashCode() : 0);
+        result = prime * result + (getId() != null ? getId().hashCode() : 0);
+        result = prime * result + (getPointA() != null ? getPointA().hashCode() : 0);
+        result = prime * result + (getPointB() != null ? getPointB().hashCode() : 0);
+        result = prime * result + (getPointC() != null ? getPointC().hashCode() : 0);
         return result;
     }
-
 
     @Override
     public String toString() {
         return "Triangle{" +
-                "name='" + getName() + '\'' +
-                ", a=" + getA() +
-                ", b=" + getB() +
-                ", c=" + getC() +
+                "name='" + getId() + '\'' +
+                ", a=" + getPointA() +
+                ", b=" + getPointB() +
+                ", c=" + getPointC() +
                 '}';
     }
 }
